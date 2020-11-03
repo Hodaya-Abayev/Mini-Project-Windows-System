@@ -1,0 +1,43 @@
+﻿<Window x:Class="UI.HostOption"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="HostOption" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="myButtonStyle"
+           TargetType="Button">
+            <Setter Property="FontSize"
+              Value="22 " />
+            <Setter Property="FontFamily"
+              Value="Gabriola" />
+            <Setter Property="FontWeight"
+              Value="Bold" />
+            <Setter Property="Height"
+                    Value="40"/>
+            <Setter Property="Background"
+                    Value="#FFDCC4EA"/>
+
+
+
+
+        </Style>
+    </Window.Resources>
+    <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+        
+        <Grid.Background>
+            <ImageBrush ImageSource="https://images.hapisga.co.il/ssd/sites/18137/604/365d05a687b081d.JPG " Opacity="0.8"/>
+        </Grid.Background>
+
+        <Label Content="Dear host! what do you want to do?" FontWeight="Bold" FontStyle="Italic" FontSize="45" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Gabriola" Margin="10,248,261,85"/>
+        <Button Style="{StaticResource myButtonStyle}"
+        Content="orders options"  Margin="536,321,107,15"  Width="149" Height="83" Click="Button_Click_1"/>
+        <Button Style="{StaticResource myButtonStyle}"
+        Content="update hosting &#xD;&#xA;unit "  Height="83" Margin="151,321,490,15"  Width="151" Click="Button_Click_3"/>
+        <Button Style="{StaticResource myButtonStyle}"
+        Content="Delete a hosting &#xD;&#xA;unit"  Height="83" Margin="332,321,303,15"  Width="157" Background="#FFDCC4EA" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>

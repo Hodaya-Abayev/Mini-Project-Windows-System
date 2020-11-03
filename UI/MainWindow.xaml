@@ -1,0 +1,50 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="ZimmerTop" Height="450" Width="800" WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize"
+              Value="27 " />
+            <Setter Property="FontFamily"
+              Value="Gabriola" />
+            <Setter Property="FontWeight"
+              Value="Bold" />
+            <Setter Property="Height"
+                    Value="auto"/>
+            <Setter Property="Background"
+                    Value="#FF9DE6FB"/>
+            <Setter Property="BorderBrush"
+                    Value="Black"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontSize" Value="32" />
+                    <Setter Property="Foreground" Value="#FFEE1F1F" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="https://www.zimer4u.co.il/wp-content/uploads/2018/07/%D7%97%D7%95%D7%A4%D7%A9%D7%AA-%D7%A6%D7%99%D7%9E%D7%A8%D7%99%D7%9D-%D7%A2%D7%9D-%D7%99%D7%9C%D7%93%D7%99%D7%9D.jpg"  Opacity="0.8"/>
+        </Grid.Background>
+
+        <Label Content="Wellcome to Zimmer Top!"  FontWeight="Bold" FontStyle="Italic" FontSize="48" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Gabriola" Margin="199,57,167,267" Width="426" Height="95"/>
+
+        <Button Content="Customer" Margin="31,327,595,38"  Click="customer_Button_Click"/>
+        
+
+        <Button  Margin="299,327,325,38"  Click="host_Button_Click" Content="Host" />
+        <Button Content="Site Manager" Margin="552,327,69,38" Click="site_manager_Button_Click" />
+        <Label Content="Choose one of the option:" HorizontalAlignment="Stretch" Margin="257,200,197,156" VerticalAlignment="Center" Height="63" FontWeight="Bold" FontStyle="Italic" FontSize="36" FontFamily="Gabriola" RenderTransformOrigin="0.442,0.511"/>
+       
+
+
+    </Grid>
+
+</Window>

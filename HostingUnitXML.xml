@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HostingUnits>
+  <hostingUnit>
+    <HostingUnitKey>11111111</HostingUnitKey>
+    <host>
+      <HostKey>322758889</HostKey>
+      <PrivateName>zimer 1</PrivateName>
+      <FamilyName>cohen</FamilyName>
+      <FhoneNumber>039554809</FhoneNumber>
+      <MailAddress>yiska9233@gmail.com</MailAddress>
+      <BankBranchDetails>
+        <BankNumber>12</BankNumber>
+        <BankName>בנק אגוד לישראל בע"מ</BankName>
+        <BranchNumber>75</BranchNumber>
+        <BranchAddress>אחוזה 153 153</BranchAddress>
+        <BranchCity>רעננה</BranchCity>
+      </BankBranchDetails>
+      <BankAccountNumber>022789</BankAccountNumber>
+      <CollectionClearance>true</CollectionClearance>
+    </host>
+    <HostingUnitName>kasum</HostingUnitName>
+    <area>All</area>
+    <Diary></Diary>
+
+
+  </hostingUnit>
+
+  <hostingUnit>
+    <HostingUnitKey>22222222</HostingUnitKey>
+    <host>
+      <HostKey>016603748</HostKey>
+      <PrivateName>zimer 2</PrivateName>
+      <FamilyName>alex</FamilyName>
+      <FhoneNumber>039517140</FhoneNumber>
+      <MailAddress>hodaya020500@gmail.com</MailAddress>
+      <BankBranchDetails>
+        <BankNumber>13</BankNumber>
+        <BankName>בנק לאומי לישראל בע"מ</BankName>
+        <BranchNumber>861</BranchNumber>
+        <BranchAddress>שדרות העצמאות 67 </BranchAddress>
+        <BranchCity>בת ים</BranchCity>
+      </BankBranchDetails>
+      <BankAccountNumber>022789</BankAccountNumber>
+      <CollectionClearance>true</CollectionClearance>
+    </host>
+    <HostingUnitName>suite1</HostingUnitName>
+    <area>Center</area>
+    <Diary></Diary>
+
+
+
+  </hostingUnit>
+  <hostingUnit>
+    <HostingUnitKey>33333333</HostingUnitKey>
+    <host>
+      <HostKey>207109190</HostKey>
+      <PrivateName>zimer 3</PrivateName>
+      <FamilyName>levi</FamilyName>
+      <FhoneNumber>039514945</FhoneNumber>
+      <MailAddress>janet0166@gmail.com</MailAddress>
+      <BankBranchDetails>
+        <BankNumber>12</BankNumber>
+        <BankName>בנק הפועלים בע"מ</BankName>
+        <BranchNumber>617</BranchNumber>
+        <BranchAddress>ויצמן 9 </BranchAddress>
+        <BranchCity>יהוד</BranchCity>
+      </BankBranchDetails>
+      <BankAccountNumber>123456</BankAccountNumber>
+      <CollectionClearance>false</CollectionClearance>
+    </host>
+    <HostingUnitName>suite2</HostingUnitName>
+    <area>Jerusalem</area>
+    <Diary></Diary>
+
+
+  </hostingUnit>
+
+</HostingUnits>
+
+

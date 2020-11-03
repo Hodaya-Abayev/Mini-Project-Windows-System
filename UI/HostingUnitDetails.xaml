@@ -1,0 +1,153 @@
+﻿<Window x:Class="UI.HostingUnitDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="HostingUnitDetails" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="myLableStyle"
+           TargetType="Label">
+            <Setter Property="FontSize"
+              Value="13 " />
+            <Setter Property="FontFamily"
+              Value="Gabriola" />
+            <Setter Property="FontWeight"
+              Value="Bold" />
+            <Setter Property="Height"
+                    Value="40"/>
+            <Setter Property="Background"
+                    Value="#FF9DE6FB"/>
+        </Style>
+    </Window.Resources>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.54,0.599">
+
+        <Label Content="Please fill in the details below: "  FontWeight="Bold" FontStyle="Italic" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Gabriola" Margin="166,0,230,377" Width="396" Height="92"/>
+        <Grid x:Name="bank" Margin="18,69,548,43" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+
+
+            </Grid.RowDefinitions>
+            <Label Style="{StaticResource myLableStyle}" 
+                   Content="      Bank details:" HorizontalAlignment="Center" Height="36" Margin="10,0" VerticalAlignment="Top" Width="182" FontSize="20" Grid.ColumnSpan="2">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFAC9B9B" Offset="0"/>
+                        <GradientStop Color="#FFE89090" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+                <Label.Foreground>
+                    <SolidColorBrush Color="Black"/>
+                </Label.Foreground>
+            </Label>
+            <Label Content="Bank number:" HorizontalAlignment="Stretch" Height="26" Margin="5,19,0,10" Grid.Row="1" VerticalAlignment="Stretch" Background="#00000000"/>
+            <Label Content="Bank name:" HorizontalAlignment="Stretch" Height="26" Margin="0,23,5,13" Grid.Row="2" VerticalAlignment="Stretch" Background="#00000000"/>
+            <Label Content="Branch number:" HorizontalAlignment="Stretch" Height="26" Margin="0,19,5,10" Grid.Row="3" VerticalAlignment="Stretch" Background="#00000000" RenderTransformOrigin="0.52,0.104"/>
+            <Label Content="Branch Address:" HorizontalAlignment="Stretch" Height="26" Margin="0,20,0,10" Grid.Row="4" VerticalAlignment="Stretch" Background="#00000000"/>
+            <Label Content="Branch City:" HorizontalAlignment="Stretch" Height="26" Margin="0,19,0,10" Grid.Row="5" VerticalAlignment="Stretch" Background="#00000000"  />
+           
+            <ComboBox x:Name="bankNumberComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="94" />
+            <ComboBox x:Name="bankNameComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="0.5,18,-12,0" Grid.Row="2" VerticalAlignment="Top" Width="115" />
+            <ComboBox x:Name="branchNumberComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="2,17,0,0" Grid.Row="3" VerticalAlignment="Top" Width="94" />
+            <ComboBox x:Name="branchAdressComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="2,18,-4,0" Grid.Row="4" VerticalAlignment="Top" Width="115" />
+            <ComboBox x:Name="branchCityComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="2,15,-4,0" Grid.Row="5" VerticalAlignment="Top" Width="115" />
+
+        </Grid>
+        <Grid x:Name="owner" Margin="286,69,297,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="102*"/>
+                <ColumnDefinition Width="107*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+
+            </Grid.RowDefinitions>
+            <Grid x:Name="hostingUnit" Margin="158,-17,-259,2" Grid.RowSpan="4" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36*"/>
+                    <RowDefinition Height="37*"/>
+                    <RowDefinition Height="36*"/>
+                    <RowDefinition Height="33"/>
+                    <RowDefinition Height="11*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="37*"/>
+
+
+
+                </Grid.RowDefinitions>
+                <Label Content="Hosting unit name:" HorizontalAlignment="Right" Grid.Row="2" VerticalAlignment="Stretch" Background="#00000000" Margin="0,0,94,10" Grid.RowSpan="2" Width="114" Grid.ColumnSpan="2"/>
+                <Label Content="Diary:" HorizontalAlignment="Stretch" Height="26" Margin="0,0,0,10" Grid.Row="4" VerticalAlignment="Stretch" Background="#00000000" Grid.RowSpan="2"/>
+                <TextBox x:Name="hostingUnitNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="28" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" BorderBrush="#FF28292B" TextChanged="hostingUnitNameTextBox_TextChanged" />
+                <Label x:Name="areaTextBox" Content="Area:" HorizontalAlignment="Stretch" Height="26" Margin="0,0,0,7" Grid.Row="3" VerticalAlignment="Stretch" Background="#00000000"/>
+
+            </Grid>
+            <Label Style="{StaticResource myLableStyle}" 
+              Content="          Owner details:" HorizontalAlignment="Stretch" Height="Auto" Margin="14,0,13,14" VerticalAlignment="Stretch" FontSize="20" Grid.ColumnSpan="2" Foreground="Black">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFAC9B9B" Offset="0"/>
+                        <GradientStop Color="#FFE89090" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label Content="Private name:" HorizontalAlignment="Stretch" Margin="0,12,5,12" Grid.Row="2" VerticalAlignment="Stretch" Background="#00000000"/>
+            <Label Content="Family name:" HorizontalAlignment="Stretch" Margin="0,12,5,12" Grid.Row="3" VerticalAlignment="Stretch" Background="#00000000"/>
+            <Label Content="Host key:" HorizontalAlignment="Stretch" Margin="0,12,5,12" Grid.Row="1" VerticalAlignment="Stretch" Background="#00000000"/>
+            <Label Content="Phone number:" HorizontalAlignment="Stretch" Margin="0,12,5,12" Grid.Row="4" VerticalAlignment="Stretch" Background="#00000000"/>
+            <Label Content="Mail address:" HorizontalAlignment="Stretch" Margin="0,12,5,12" Grid.Row="5" VerticalAlignment="Stretch" Background="#00000000"/>
+            <Label Content="Bank account&#xA; number:" HorizontalAlignment="Stretch" Grid.Row="6" VerticalAlignment="Stretch" Background="#00000000"/>
+            <Label Content="Collection &#xA;clearance:" HorizontalAlignment="Stretch" Margin="-5,0,91,0" Grid.Row="7" VerticalAlignment="Stretch" Background="#00000000" Grid.ColumnSpan="2"/>
+            <CheckBox Content="" HorizontalAlignment="Left" Height="17" Margin="68,10,0,0" Grid.Row="7" VerticalAlignment="Top" Width="34" IsChecked="{Binding CollectionClearance, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+            <TextBox x:Name="hostKeyTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,12,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" BorderBrush="#FF28292B" LostFocus="hostKeyLostFocus" GotFocus="hostKeyGotFocus"/>
+            <TextBox x:Name="BankAccountNumberTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,12,0,10" Grid.Row="6" TextWrapping="Wrap" Width="91" BorderBrush="#FF28292B" LostFocus="BankAccountNumberLostFocus" GotFocus="BankAccountNumberGotFocus"/>
+            <TextBox x:Name="mailAdressTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,12,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" BorderBrush="#FF28292B" LostFocus="mailAdress_LostFocus" GotFocus="mailAdress_GotFocus"/>
+            <TextBox x:Name="phoneNumberTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,12,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" BorderBrush="#FF28292B" LostFocus="phoneNumberLostFocus" GotFocus="phoneNumberGotFocus"/>
+            <TextBox x:Name="familyNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,12,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" BorderBrush="#FF28292B"/>
+            <TextBox x:Name="privateNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,12,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" BorderBrush="#FF28292B" />
+            <Label x:Name="mailAdressLabel" Content="" HorizontalAlignment="Left" Margin="82,38,-49,38" Grid.Row="5" Width="176" FontSize="10" Foreground="Red" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="White"/>
+
+        </Grid>
+        <Button Content="Finish      " HorizontalAlignment="Stretch" Margin="673,418,44,20" VerticalAlignment="Stretch" Width="75" BorderBrush="#FF28292B" Background="#FFE89090" FontFamily="Gabriola" Click="Button_Click" FontSize="16"/>
+        <Calendar HorizontalAlignment="Left" Margin="524,217,0,0" VerticalAlignment="Top" Width="224" Height="172"/>
+        <Label x:Name="hostKeyLabel" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="181" Margin="364,150,0,0" BorderBrush="Red" Foreground="Red"  FontSize="10"/>
+        <Label x:Name="phoneNumberLabel" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="181" Margin="364,304,0,0" BorderBrush="Red" Foreground="Red"  FontSize="10"/>
+        <Label x:Name="bankAccountNumberLabel" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="161" Margin="364,401,0,0" BorderBrush="White" FontSize="10" Foreground="Red"/>
+        <ComboBox x:Name="areaComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="98" Margin="650,168,0,0" Height="26" BorderBrush="Black" SelectedItem="{Binding Area}">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+
+
+    </Grid>
+
+</Window>

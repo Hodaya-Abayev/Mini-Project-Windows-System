@@ -1,0 +1,46 @@
+﻿<Window x:Class="UI.ListGuestReqestArea"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="ListGuestReqestArea" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+
+        <DataGrid
+            x:Name="guestRequestByAreaDataGrid" RowHeight="50" AutoGenerateColumns="False" IsReadOnly="True"   Foreground="Black" FontSize="16" ScrollViewer.VerticalScrollBarVisibility="Visible"  FontFamily="Gabriola" Grid.ColumnSpan="2" Margin="0,119,0,0" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Guest Request Key"  Binding="{Binding GuestRequestKey}"/>
+                <DataGridTextColumn  Header="Private Name" Binding="{Binding PrivateName}"/>
+                <DataGridTextColumn  Header="Family Name" Binding="{Binding FamilyName}"/>
+                <DataGridTextColumn Header="Entry Date" Binding="{Binding EntryDate, StringFormat='dd/MM/yyyy'}"/>
+                <DataGridTextColumn Header="Release Date" Binding="{Binding ReleaseDate, StringFormat='dd/MM/yyyy'}"/>
+                <DataGridTextColumn Header="Registration Date" Binding="{Binding RegistrationDate, StringFormat='dd/MM/yyyy'}"/>
+                <DataGridTextColumn  Header="Mail Address" Binding="{Binding MailAddress}"/>
+                <DataGridTextColumn  Header="Sub Area" Binding="{Binding SubArea}"/>
+                <DataGridTextColumn  Header="Adults" Binding="{Binding Adults}"/>
+                <DataGridTextColumn  Header="Children" Binding="{Binding Children}"/>
+                <DataGridTextColumn  Header="status Request" Binding="{Binding statusRequest}"/>
+                <DataGridTextColumn  Header="area" Binding="{Binding area}"/>
+                <DataGridTextColumn  Header="types" Binding="{Binding types}"/>
+                <DataGridTextColumn  Header="pool" Binding="{Binding pool}"/>
+                <DataGridTextColumn  Header="jacuzzi" Binding="{Binding jacuzzi}"/>
+                <DataGridTextColumn  Header="garden" Binding="{Binding garden}"/>
+                <DataGridTextColumn  Header="childrensAttractions" Binding="{Binding childrensAttractions}"/>
+                <DataGridTextColumn  Header="TV" Binding="{Binding tv}"/>
+                <DataGridTextColumn  Header="Room Service" Binding="{Binding RoomService}"/>
+                <DataGridTextColumn  Header="Playpen" Binding="{Binding Playpen}"/>
+                <DataGridTextColumn  Header="meals" Binding="{Binding meals}"/>
+                <DataGridTextColumn Header="Status reguest"  Binding="{Binding statusRequest}"/>
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        <ComboBox x:Name="areacomboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Margin="289,62,0,0" SelectionChanged="comboBox_SelectionChanged" Grid.ColumnSpan="2" Height="29" />
+        <Label x:Name="label" Content="Choose a area:" HorizontalAlignment="Left" Height="45" Margin="300,10,0,0" VerticalAlignment="Top" Width="161" FontSize="24" Grid.ColumnSpan="2" FontFamily="Gabriola"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <expireRequest>30</expireRequest>
+  <guestRequestKeySeq>10000002</guestRequestKeySeq>
+  <hostingUnitKeySeq>10000000</hostingUnitKeySeq>
+  <OrderKeyseq>10000000</OrderKeyseq>
+  <fee>10</fee>
+</configuration>

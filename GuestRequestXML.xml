@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GuestRequests>
+
+
+  <guestReques>
+
+    <PrivateName>hodaya</PrivateName>
+
+    <Adults>4</Adults>
+
+    <area>All</area>
+    <SubArea>tel aviv</SubArea>
+
+    <Children>4</Children>
+
+    <childrensAttractions>Necesarry</childrensAttractions>
+
+    <EntryDate>2020-02-11T00:00:00</EntryDate>
+
+    <FamilyName>abayev</FamilyName>
+
+    <garden>Necesarry</garden>
+
+    <GuestRequestKey>11111111</GuestRequestKey>
+
+    <jacuzzi>Necesarry</jacuzzi>
+
+    <MailAddress>hodaya020500@gmail.com</MailAddress>
+
+    <pool>Necesarry</pool>
+
+    <RegistrationDate>2020-02-09T14:49:25.4382891+02:00</RegistrationDate>
+
+    <ReleaseDate>2020-02-19T00:00:00</ReleaseDate>
+
+    <statusRequest>Active</statusRequest>
+
+    <types>Zimmer</types>
+    <tv>Possible</tv>
+    <RoomService>true</RoomService>
+    <Playpen>true</Playpen>
+    <meals>All</meals>
+    <childrenAttractions>Necesarry</childrenAttractions>
+    
+
+  </guestReques>
+
+  <guestReques>
+
+    <PrivateName>yiska</PrivateName>
+
+    <Adults>5</Adults>
+
+    <area>Center</area>
+    <SubArea>ramat gan</SubArea>
+
+    <Children>3</Children>
+
+    <childrensAttractions>Necesarry</childrensAttractions>
+
+    <EntryDate>2020-02-20T00:00:00</EntryDate>
+
+    <FamilyName>ashkenazi</FamilyName>
+
+    <garden>Necesarry</garden>
+
+    <GuestRequestKey>22222222</GuestRequestKey>
+
+    <jacuzzi>Necesarry</jacuzzi>
+
+    <MailAddress>yiska9233@gmail.com</MailAddress>
+
+    <pool>Necesarry</pool>
+
+    <RegistrationDate>2020-02-10T14:49:25.4382891+02:00</RegistrationDate>
+
+    <ReleaseDate>2020-02-19T00:00:00</ReleaseDate>
+
+    <statusRequest>Active</statusRequest>
+
+    <types>RoomHotel</types>
+    <tv>Necesarry</tv>
+    <RoomService>false</RoomService>
+    <Playpen>true</Playpen>
+    <meals>Evening</meals>
+    <childrenAttractions>Necesarry</childrenAttractions>
+
+
+  </guestReques>
+
+  <guestRequest>
+    <PrivateName>avi</PrivateName>
+    <Adults>3</Adults>
+    <SubArea>tveria</SubArea>
+    <area>All</area>
+    <Children>2</Children>
+    <childrenAttractions>Necesarry</childrenAttractions>
+    <EntryDate>2020-02-25T00:00:00</EntryDate>
+    <FamilyName>cohen</FamilyName>
+    <garden>Necesarry</garden>
+    <GuestRequestKey>33333333</GuestRequestKey>
+    <jacuzzi>Necesarry</jacuzzi>
+    <MailAddress>janet0166@gmail.com</MailAddress>
+    <pool>Necesarry</pool>
+    <RegistrationDate>2020-02-09T00:00:00+02:00</RegistrationDate>
+    <ReleaseDate>2020-02-27T00:00:00</ReleaseDate>
+    <statusRequest>Active</statusRequest>
+    <types>Zimmer</types>
+    <tv>Necesarry</tv>
+    <RoomService>false</RoomService>
+    <meals>Morning</meals>
+    <Playpen>false</Playpen>
+  </guestRequest>
+  <guestRequest>
+    <PrivateName>chaya</PrivateName>
+    <Adults>6</Adults>
+    <SubArea>elad</SubArea>
+    <area>All</area>
+    <Children>4</Children>
+    <childrenAttractions>Necesarry</childrenAttractions>
+    <EntryDate>2020-02-27T00:00:00</EntryDate>
+    <FamilyName>levi</FamilyName>
+    <garden>Necesarry</garden>
+    <GuestRequestKey>44444444</GuestRequestKey>
+    <jacuzzi>Necesarry</jacuzzi>
+    <MailAddress>a0525490172@gmail.com</MailAddress>
+    <pool>Necesarry</pool>
+    <RegistrationDate>2020-02-09T00:00:00+02:00</RegistrationDate>
+    <ReleaseDate>2020-02-29T00:00:00</ReleaseDate>
+    <statusRequest>Active</statusRequest>
+    <types>Zimmer</types>
+    <tv>Necesarry</tv>
+    <RoomService>false</RoomService>
+    <meals>Morning</meals>
+    <Playpen>false</Playpen>
+  </guestRequest>
+
+
+</GuestRequests>

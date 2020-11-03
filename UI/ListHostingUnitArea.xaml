@@ -1,0 +1,45 @@
+﻿<Window x:Class="UI.ListHostingUnitArea"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="ListHostingUnitArea" Height="450" Width="717.106" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,34,0">
+        <DataGrid
+        x:Name="ListHostingUnitAreaDateGrid" RowHeight="50" AutoGenerateColumns="False" IsReadOnly="True" Foreground="Black" FontSize="23" FontFamily="Gabriola" SelectionChanged="listOrderDateGrid_SelectionChanged" Margin="0,134,-30,0" >
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="Hosting unit key"  Binding="{Binding HostingUnitKey}"/>
+                <DataGridTextColumn  Header="Hosting unit name" Binding="{Binding HostingUnitName}"/>
+                <DataGridTextColumn  Header="Area" Binding="{Binding area}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Button x:Name="OwnerDetails" Content="Owner Details" Margin="3" Foreground="White" Background="#FF321368" Click="ownerClick" FontFamily="Gabriola" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Button x:Name="BankBranchDetails" Content="Bank barnch details" Margin="3" Foreground="White" Background="#FF321368" Click="bankBranchClick" FontFamily="Gabriola" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        <ComboBox x:Name="areacomboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Margin="289,62,0,0" SelectionChanged="comboBox_SelectionChanged" Height="29" />
+        <Label x:Name="label" Content="Choose a area:" HorizontalAlignment="Left" Height="45" Margin="300,10,0,0" VerticalAlignment="Top" Width="161" FontSize="24" FontFamily="Gabriola"/>
+
+
+
+
+    </Grid>
+</Window>

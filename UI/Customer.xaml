@@ -1,0 +1,141 @@
+﻿<Window x:Class="UI.Customer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        
+        Title="Customer" Height="700" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="Margin"
+                    Value="10,10,10.4,9.8"/>
+            <Setter Property="FontSize"
+              Value="21" />
+            <Setter Property="FontFamily"
+              Value="Gabriola" />
+            <Setter Property="FontWeight"
+              Value="Regular" />
+            <Setter Property="Foreground"
+              Value="DarkBlue" />
+            <Setter Property="BorderBrush"
+              Value="White" />
+        </Style>
+    </Window.Resources>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbnpqz7S3IOQCF54TkTgwcLOJML5fznYvazVUj7sGknqzy611k"  Opacity="0.7"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontFamily="Gabriola"  Text="Add new request:" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF020202" FontWeight="Bold"/>
+        <Button x:Name="addButton" FontFamily="Gabriola" Content="Add  "  Grid.Row="2" FontSize="22" Margin="662,10,35,25" Foreground="#FF150000" Background="#FFACDAAC" Click="Add_Button_Click" FontWeight="Bold"  />
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="guestRequest" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Entry Date:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black"/>
+                <Label Content="Family Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black"/>
+                <TextBox x:Name="familyNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,10,0,6" Grid.Row="1"  VerticalAlignment="Center" Width="120" BorderBrush="Black"/>
+
+                <Label Content="Release Date:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="#FF020202" BorderBrush="{x:Null}"/>
+                <DatePicker x:Name="releaseDatePicker" HorizontalAlignment="Left" Margin="10,10,0,6" Grid.Row="4" SelectedDate="{Binding ReleasDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Grid.Column="1" />
+
+                <ComboBox x:Name="areaComboBox" Grid.Column="1" SelectedItem="{Binding Area}" HorizontalAlignment="Left" Height="Auto"  Margin="3,8,0,10" Grid.Row="5" VerticalAlignment="Center" Width="120" BorderBrush="Black"/>
+                <Label Content="Area:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black"/>
+                <Label Content="Mail Address:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="#FF080808"/>
+                <TextBox x:Name="mailAddressTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3,7,0,10" Grid.Row="2" VerticalAlignment="Center" Width="120" BorderBrush="Black" LostFocus="mailAdress_LostFocus" GotFocus="mailAdress_GotFocus"/>
+
+                <Label Content="Adults:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="8" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black"/>
+                <TextBox x:Name="adultsTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="8" Width="120" VerticalAlignment="Center" LostFocus="adultNameTextBox_LostFocus" GotFocus="adultNameTextBox_GotFocus" BorderBrush="Black"/>
+
+
+                <Label Content="Children:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="9" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black"/>
+                <TextBox x:Name="childrenTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="9" VerticalAlignment="Center" Width="120" LostFocus="childrenTextBox_LostFocus" GotFocus="childrenTextBox_GotFocus" BorderBrush="Black"/>
+
+                <Label Content="Pool:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="10" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black"/>
+                <ComboBox x:Name="poolComboBox" Grid.Column="1" SelectedItem="{Binding Pool}" HorizontalAlignment="Left" Height="Auto" Margin="3,10,0,8" Grid.Row="10" VerticalAlignment="Center" Width="120" />
+                <Label Content="Jacuzzi:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="11" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black"/>
+                <ComboBox x:Name="jacuzziComboBox" Grid.Column="1" SelectedItem="{Binding Jacuzzi}" HorizontalAlignment="Left" Height="Auto" Margin="3" Grid.Row="11" VerticalAlignment="Center" Width="120"/>
+                <Label Content="Garden:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="12" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black"/>
+                <ComboBox x:Name="gardenComboBox" Grid.Column="1" SelectedItem="{Binding Garden}" HorizontalAlignment="Left" Height="Auto"  Margin="3" Grid.Row="12" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Private Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,0,0,6" Grid.Row="0" VerticalAlignment="Center" Width="124" Background="#FFACDAAC" BorderBrush="Black" Foreground="#FF0A0A0A" FontFamily="Gabriola" FontSize="20" Height="34" />
+                <TextBox x:Name="privateNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,8,0,10"  VerticalAlignment="Center" Width="120" BorderBrush="Black"/>
+
+                <Label Content="Type:" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,3" Grid.Row="7" VerticalAlignment="Center" Width="69" Background="#FFACDAAC" Foreground="Black" Height="37"/>
+                <ComboBox x:Name="typeComboBox" Grid.Column="1" SelectedItem="{Binding Tyeps}" HorizontalAlignment="Left" Height="Auto"  Margin="3,10,0,8" Grid.Row="7" VerticalAlignment="Center" Width="120"/>
+                <Label Content="Sub Area:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black"/>
+                <TextBox x:Name="subAreaTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,6,0,10" Grid.Row="6"  VerticalAlignment="Center" Width="120" Foreground="black" BorderBrush="Black" />
+                <Label x:Name="adultLabel" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Height="22" Margin="177,26,0,0" Grid.Row="8" Grid.RowSpan="2" VerticalAlignment="Top" Width="200" FontSize="10" Foreground="Red"/>
+                <Label x:Name="childrenLabel" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Height="23" Margin="177,27,0,0" Grid.Row="9" Grid.RowSpan="2" VerticalAlignment="Top" Width="200" FontSize="10" Foreground="Red"/>
+                <DatePicker x:Name="entryDatePicker" HorizontalAlignment="Left" Margin="10,10,0,6" Grid.Row="3" SelectedDate="{Binding ReleasDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Grid.Column="1" />
+                <Label x:Name="mailAdressLabel" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Height="22" Margin="177,28,0,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="200" FontSize="10" Foreground="Red"/>
+
+            </Grid>
+            <Grid x:Name="guestRequest_Copy" Grid.Column="1" Margin="5,0,-5,0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+                <ComboBox x:Name="ChildrensAttractionsComboBox" Grid.Column="1" SelectedItem="{Binding ChildrenAttractions}" HorizontalAlignment="Left" Height="Auto"  Margin="0,8,0,10" VerticalAlignment="Center" Width="120" Grid.Row="1"/>
+                <Label Content="Childrens Attractions:" Grid.Column="0" HorizontalAlignment="Left" Margin="0,3,0,0" Grid.Row="1" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black" Height="37"/>
+                <Label Content="Room Service:" Grid.Column="0" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="3" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="#FF080808" Width="129" Height="35"/>
+                <Label Content="Playpen:" Grid.Column="0" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="4" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black" Width="85" Height="35"/>
+                <ComboBox x:Name="tvComboBox" Grid.Column="1" SelectedItem="{Binding TV}" HorizontalAlignment="Left" Height="Auto"  Margin="0,8,0,10" VerticalAlignment="Center" Width="120" />
+                <Label Content="TV:" Grid.Column="0" HorizontalAlignment="Left" Margin="0,2,0,4" Grid.Row="0" VerticalAlignment="Center" Width="52" Background="#FFACDAAC" Foreground="Black" RenderTransformOrigin="0.442,0.5" Height="34"/>
+                <ComboBox x:Name="mealsComboBox" Grid.Column="1" SelectedItem="{Binding Meals}" HorizontalAlignment="Left" Height="Auto"  Margin="0,10,0,8" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
+                <Label Content="Meals:" Grid.Column="0" HorizontalAlignment="Left" Margin="0,5,0,38" Grid.Row="2" VerticalAlignment="Center" Background="#FFACDAAC" Foreground="Black" RenderTransformOrigin="0.217,0.696" Width="67" Height="37" Grid.RowSpan="2"/>
+
+
+
+                <CheckBox x:Name="roomScheckBox" HorizontalAlignment="Left" Height="16" Margin="141,16,0,0" Grid.Row="3" VerticalAlignment="Top" Width="35" IsChecked="{Binding RoomService, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                <CheckBox x:Name="playpenCheckBox" Content="" HorizontalAlignment="Left" Height="16" Margin="102,16,0,0" Grid.Row="4" VerticalAlignment="Top" Width="35" IsChecked="{Binding Playpen, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>

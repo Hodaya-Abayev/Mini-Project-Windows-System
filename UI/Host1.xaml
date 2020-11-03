@@ -1,0 +1,17 @@
+﻿<Window x:Class="UI.Host1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="Host1" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        
+        <Button x:Name="myAccountButton" Content="&#xD;&#xA;my account" HorizontalAlignment="Left" Margin="113,128,0,0" VerticalAlignment="Top" Width="234" Height="196" FontWeight="Bold" FontFamily="Gabriola" FontSize="48" Click="Button_Click"/>
+        <Button x:Name="AddHuButton" Content="&#xD;&#xA;add a new&#xA;hosting unit" HorizontalAlignment="Left" Margin="423,128,0,0" VerticalAlignment="Top" Width="249" Height="196" FontWeight="Bold" FontFamily="Gabriola" FontSize="36" Click="Button_Click_1"/>
+        <Image HorizontalAlignment="Left" Height="92" Margin="181,143,0,0" VerticalAlignment="Top" Width="97" Source="https://www.kraus.org.il/media/wysiwyg/kraus/header/user.png" />
+
+
+    </Grid>
+</Window>
